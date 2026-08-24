@@ -2,7 +2,7 @@ import React from 'react'
 import { Check } from 'lucide-react';
 const Card = (props) => {
 return (
-    <div className="card bg-amber-300 w-[32%] min-w-[32%]  rounded-3xl  px-5 py-7 flex flex-col jb justify-between    bg-cover  "   style={{ backgroundImage: `url(${props.image_url})` }}>
+    <div className="card bg-amber-300 w-[32%] min-w-[32%]  rounded-3xl cd    px-5 py-7 flex flex-col jb justify-between    bg-cover  "   style={{ backgroundImage: `url(${props.image_url})` }}>
             <div className="index w-10 h-10 rounded-full flex justify-center items-center bg-white">
                 {props.index}
             </div>
