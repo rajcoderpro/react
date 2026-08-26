@@ -6,7 +6,7 @@ const App = () => {
    const [data, setdata] = useState([]) 
   
   return (
-
+    
     <div className='bg-black text-white h-full p-5  bg-cover  '    style={{ backgroundImage: `url(${wolf})` }} >
       <div className="heading flex justify-center  "><h1 className="text-3xl font-bold  ">Notes Vault</h1></div>
       <div className="main p-10  flex gap-5 h-full ">
