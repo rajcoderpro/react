@@ -1,0 +1,30 @@
+import React, { createContext, useEffect, useState } from 'react'
+import { getLocalStorage, setLocalStorage } from './Data.jsx'
+
+export  const dataContext = createContext() 
+
+
+const DataProvider = ({children}) => {
+  setLocalStorage()
+  const [userData, setUserData] = useState(null)
+
+  useEffect(() => {
+    const employees = localStorage.getItem('employees')
+    ? JSON.parse(localStorage.getItem('employees'))
+    : [] 
+    setUserData(employees)
+    
+  }, [])
+  
+
+
+  return (
+    <div>
+      <dataContext.Provider value= {userData}>  
+        {children}
+      </dataContext.Provider>
+    </div>
+  )
+}
+
+export default DataProvider
