@@ -6,8 +6,13 @@ const EmployeeHeader = ({loggedInUserData  , set_user }) => {
   const logOutButton = () => {
     localStorage.clear()
     set_user('') 
-    localStorage.setItem('employees' , JSON.stringify(data.employees))
-    localStorage.setItem('admin' , JSON.stringify(data.admin))
+    localStorage.setItem('employees' , JSON.stringify(data))
+    localStorage.setItem('admin' , JSON.stringify({
+  'name':'Raj Poswal',
+  'email': "admin@me.com",
+  'password': "123",
+  'id' : 1
+}))
 
   }
   return (

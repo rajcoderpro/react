@@ -13,11 +13,11 @@ const CreateTask = () => {
         e.preventDefault()
         settask({title, date, asignto, category, description, newTask: true, accepted: false, completed: false, failed: false})
 
-        {userData.employees.map((elem , idx) => {
+        {userData.map((elem , idx) => {
             if(elem.name == asignto){
-                userData.employees[idx].tasks.push(task)
-                userData.employees[idx].taskNumbers[1].count = userData.employees[idx].taskNumbers[1].count + 1 
-                localStorage.setItem('employees' , JSON.stringify(userData.employees))
+                userData[idx].tasks.push(task)
+                userData[idx].taskNumbers[1].count = userData[idx].taskNumbers[1].count + 1 
+                localStorage.setItem('employees' , JSON.stringify(userData))
             }
         })}
 

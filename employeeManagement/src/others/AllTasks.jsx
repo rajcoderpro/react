@@ -14,7 +14,7 @@ const AllTasks = () => {
         <div className = 'text-white font-bold text-xl w-1/5  px-5 py-3  rounded-lg'>Failed Tasks</div>
 
       </div>
-      {data.employees.map((elem , idx) =>{
+      {data.map((elem , idx) =>{
         return <TaskLine key = {idx} data = {elem}/>
       })}
     </div>

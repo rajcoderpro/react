@@ -12,7 +12,7 @@ const employees = [
   { 
     "id": 1,
     "name": "Aarav Sharma",
-    "email": "e@e.e",
+    "email": "emp1@company.com",
     "password": "123",
     "taskNumbers": [
       { "label": "active", "count": 3 },

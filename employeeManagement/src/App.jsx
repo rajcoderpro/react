@@ -25,8 +25,8 @@ const App  =  ()  => {
       setUser('admin')
       localStorage.setItem('loggedIn', JSON.stringify({ role: 'admin' }))
       setLoggedInUserData({name: 'Raj Poswal', email: 'admin@me.com'})
-    } else if (authData && authData.employees.some((e) => e.email === email)) {
-      const employee = authData.employees.find((e) => e.email === email )
+    } else if (authData && authData.some((e) => e.email === email)) {
+      const employee = authData.find((e) => e.email === email )
       if(employee.password === password) {
         setUser('employee') 
         setLoggedInUserData(employee)

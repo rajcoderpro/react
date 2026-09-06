@@ -9,9 +9,7 @@ const DataProvider = ({children}) => {
   const [userData, setUserData] = useState(null)
 
   useEffect(() => {
-    const employees = localStorage.getItem('employees')
-    ? JSON.parse(localStorage.getItem('employees'))
-    : [] 
+    const employees = localStorage.getItem('employees') 
     setUserData(employees)
     
   }, [])
