@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
-import { getLocalStorage, setLocalStorage } from './Data.jsx'
+import  { createContext, useEffect, useState } from 'react'
+import {setLocalStorage } from './Data.jsx'
 
 export  const dataContext = createContext() 
 

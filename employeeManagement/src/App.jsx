@@ -7,7 +7,7 @@ import { dataContext } from './Data/DataProvider'
 const App  =  ()  => {
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
-  const authData =  useContext(dataContext)
+  const authData = useContext(dataContext)
 
   useEffect(() => {
     const loggedInUser =  localStorage.getItem('loggedIn')
@@ -25,8 +25,8 @@ const App  =  ()  => {
       setUser('admin')
       localStorage.setItem('loggedIn', JSON.stringify({ role: 'admin' }))
       setLoggedInUserData({name: 'Raj Poswal', email: 'admin@me.com'})
-    } else if (authData && authData.some((e) => e.email === email)) {
-      const employee = authData.find((e) => e.email === email )
+    } else if (authData && JSON.parse(authData).some((e) => e.email === email)) {
+      const employee = JSON.parse(authData).find((e) => e.email === email )
       if(employee.password === password) {
         setUser('employee') 
         setLoggedInUserData(employee)
