@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { dataContext } from "../Data/DataProvider"
+import { dataContext } from "../data/DataProvider"
 import TaskLine from "./TaskLine"
 
 const AllTasks = () => {

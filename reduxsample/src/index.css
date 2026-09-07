@@ -1,0 +1,22 @@
+*{
+  background-color: #000000;
+  color: #ffffff;
+}
+#mainDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+button , input{
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  background-color: rgb(216, 93, 200);
+  border-radius: 10px;
+  border: none;
+  
+}

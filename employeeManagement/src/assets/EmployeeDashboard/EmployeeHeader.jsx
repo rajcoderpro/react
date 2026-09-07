@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { dataContext } from '../../Data/DataProvider'
+import { dataContext } from '../../data/DataProvider'
 
 const EmployeeHeader = ({loggedInUserData  , set_user }) => {
   const data = useContext(dataContext)

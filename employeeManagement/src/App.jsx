@@ -1,8 +1,8 @@
 import  { useContext, useEffect, useState } from 'react'
-import Login from './components/Login'
-import EmployeeDashboard from './components/EmployeeDashboard'
-import AdminPanel from './components/AdminPanel'
-import { dataContext } from './Data/DataProvider'
+import Login from './components/Login.jsx'
+import EmployeeDashboard from './components/EmployeeDashboard.jsx'
+import AdminPanel from './components/AdminPanel.jsx'
+import { dataContext } from './data/DataProvider.jsx'
 
 const App  =  ()  => {
   const [user, setUser] = useState(null)
@@ -17,13 +17,13 @@ const App  =  ()  => {
       setUser(temp.role)
       setLoggedInUserData(temp.role === 'admin' ? {name: 'Raj Poswal', email: ''} : temp.data)
     }
-  }, [user])
+  }, [])
 
 
   const handleLogin = (email, password) => {
     if (email === 'admin@me.com' && password == '123') {
       setUser('admin')
-      localStorage.setItem('loggedIn', JSON.stringify({ role: 'admin' }))
+      localStorage.setItem('loggedIn', JSON.stringify({ role: 'admin'   }))
       setLoggedInUserData({name: 'Raj Poswal', email: 'admin@me.com'})
     } else if (authData && JSON.parse(authData).some((e) => e.email === email)) {
       const employee = JSON.parse(authData).find((e) => e.email === email )

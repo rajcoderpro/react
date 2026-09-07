@@ -1,4 +1,3 @@
-import React from 'react'
 import EmployeeHeader from '../assets/EmployeeDashboard/EmployeeHeader'
 import CreateTask from '../others/CreateTask'
 import AllTasks from '../others/AllTasks'
